@@ -64,6 +64,7 @@ const EMAIL_DATA = {
   // ——— APRIL 2026 ———
   // Add April emails here as they're created:
   "2026-04-07": { subject: "The $126,000 Ghost Pattern", status: "scheduled", link: "https://docs.google.com/document/d/1v4KcU7jCSDjqZgyTVHLEjVbcJ-3HRTc58-ylbnVyVy0/edit?usp=sharing", notes: "Push to call" },
+  "2026-04-08": { subject: "Hormuz is closed", status: "scheduled", link: "https://docs.google.com/document/d/1_8fCLtpCHfJ8MOxvwNqHjqKBTZ0JBFZVOxHp35LJYlY/edit?usp=sharing", notes: "Push to call" },
 
 
   // ——— MAY 2026 ———
