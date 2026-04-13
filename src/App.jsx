@@ -26,50 +26,63 @@ const STATUS_CONFIG = {
  *    notes:   Any notes for the client
  * ============================================================
  */
+/*
+ * ============================================================
+ *  EMAIL DATA FORMAT — SUPPORTS 1 OR 2 EMAILS PER DAY
+ * ============================================================
+ *  Each date key maps to an ARRAY of email objects (1 or 2).
+ *
+ *  One email per day:
+ *    "2026-04-07": [{ subject: "...", status: "...", link: "...", notes: "..." }]
+ *
+ *  Two emails per day:
+ *    "2026-04-12": [
+ *      { subject: "Email A", status: "sent",      link: "...", notes: "..." },
+ *      { subject: "Email B", status: "scheduled", link: "...", notes: "..." },
+ *    ]
+ * ============================================================
+ */
 const EMAIL_DATA = {
   // ——— FEBRUARY 2026 ———
-  "2026-02-01": { subject: "Empty", status: "draft", link: "#", notes: "n/a" },
-  "2026-02-02": { subject: "Empty", status: "draft", link: "#", notes: "n/a" },
-  "2026-02-03": { subject: "Empty", status: "draft", link: "#", notes: "n/a" },
-  "2026-02-04": { subject: "Empty", status: "draft", link: "#", notes: "n/a" },
-  "2026-02-05": { subject: "Empty", status: "draft", link: "#", notes: "n/a" },
-  "2026-02-06": { subject: "Empty", status: "draft", link: "#", notes: "n/a" },
-  "2026-02-07": { subject: "Empty", status: "draft", link: "#", notes: "n/a" },
-  "2026-02-08": { subject: "Empty", status: "draft", link: "#", notes: "n/a" },
-  "2026-02-09": { subject: "Empty", status: "draft", link: "#", notes: "n/a" },
-  "2026-02-10": { subject: "Market reframe", status: "sent", link: "https://docs.google.com/document/d/13DdYz5TZK_ZURIQi3wTskquwY9KkEauEoMvxwg2wYh0/edit?usp=sharing", notes: "No middle of email ad yet. Trust first" },
-  "2026-02-11": { subject: "Hardware Wallet", status: "sent", link: "https://docs.google.com/document/d/1qOZljlR74-q-XTfojLia6LCloWBhcsEI6E-p1mT3mgM/edit?usp=sharing", notes: "Could we aff link a couple wallets?" },
-  "2026-02-12": { subject: "Direct offer", status: "sent", link: "https://docs.google.com/document/d/1h89jkHzmOn5Ah2B3oLFuFNqi7jL6aORk1nvyrnaRY9E/edit?usp=sharing", notes: "To Kevin 995 vsl" },
-  "2026-02-13": { subject: "Trustpilot", status: "sent", link: "https://docs.google.com/document/d/1a3CKCKZiB6Y0h3jBp-WZ3cJxwwZp75kVI2SS-Nj1r3M/edit?usp=sharing", notes: "No notes" },
-  "2026-02-14": { subject: "TBD", status: "draft", link: "", notes: "TBD" },
-  "2026-02-15": { subject: "TBD", status: "draft", link: "", notes: "TBD" },
-  "2026-02-16": { subject: "TBD", status: "draft", link: "", notes: "TBD" },
-  "2026-02-17": { subject: "TBD", status: "draft", link: "", notes: "TBD" },
-  "2026-02-18": { subject: "TBD", status: "draft", link: "", notes: "CTA to video" },
-  "2026-02-19": { subject: "TBD", status: "draft", link: "", notes: "CTA to video" },
-  "2026-02-20": { subject: "Jamie 1", status: "sent", link: "https://docs.google.com/document/d/1xUdeNli_PGdq-FcNUy6veBG72NZgUoBEMC2KT0gAkvc/edit?usp=sharing", notes: "CTA to video" },
-  "2026-02-21": { subject: "Jamie 2", status: "sent", link: "https://docs.google.com/document/d/1TntqRoK2hTTnb62M1NuTNSqc8oBpeGxRPV3rjguInVI/edit?usp=sharing", notes: "CTA to video" },
-  "2026-02-22": { subject: "Jamie 3", status: "scheduled", link: "https://docs.google.com/document/d/12u5BEKWAWRIgQmnN9Chxonp5UATRbmBVpYtEM_YVg3o/edit?usp=sharing", notes: "CTA to video" },
-  "2026-02-23": { subject: "Jamie 4", status: "scheduled", link: "https://docs.google.com/document/d/13QgOtpONdM43-lCxgikNINCnEsqLWLazjM7LMkIyPOk/edit?usp=sharing", notes: "CTA to video" },
-  "2026-02-24": { subject: "Jamie 5", status: "scheduled", link: "https://docs.google.com/document/d/1G4mjE02v6LEk6Ke6CK3Yj8rOkYcyEomN-oV2r5ICzj4/edit?usp=sharing", notes: "CTA to video" },
-  "2026-02-25": { subject: "Jamie cart close 1", status: "scheduled", link: "https://docs.google.com/document/d/1haGvL39SnHd8zaTO74tEh72yZ0sTVf-QTdAlFxCNeBY/edit?usp=sharing", notes: "Straight to checkout" },
-  "2026-02-26": { subject: "Jamie cart close 2", status: "scheduled", link: "https://docs.google.com/document/d/1nzS8EwLefFznIrG5SSe9NIqIat8MzSgCZLBE6KNCD0Y/edit?usp=sharing", notes: "Straight to checkout" },
-  "2026-02-27": { subject: "Jamie cart close 3", status: "scheduled", link: "https://docs.google.com/document/d/1kfy-xPPX5anTdaVr36eMEvhbzG2xD_TOVmAjnM2rbV8/edit?usp=sharing", notes: "Straight to checkout" },
-  "2026-02-28": { subject: "Jamie cart close 4", status: "scheduled", link: "https://docs.google.com/document/d/1Vd8QSbMWJIWAit3Vgnu5vh_UU5OeFXyzn1pm_RsWEJY/edit?usp=sharing", notes: "Straight to checkout" },
+  "2026-02-01": [{ subject: "Empty", status: "draft", link: "#", notes: "n/a" }],
+  "2026-02-02": [{ subject: "Empty", status: "draft", link: "#", notes: "n/a" }],
+  "2026-02-03": [{ subject: "Empty", status: "draft", link: "#", notes: "n/a" }],
+  "2026-02-04": [{ subject: "Empty", status: "draft", link: "#", notes: "n/a" }],
+  "2026-02-05": [{ subject: "Empty", status: "draft", link: "#", notes: "n/a" }],
+  "2026-02-06": [{ subject: "Empty", status: "draft", link: "#", notes: "n/a" }],
+  "2026-02-07": [{ subject: "Empty", status: "draft", link: "#", notes: "n/a" }],
+  "2026-02-08": [{ subject: "Empty", status: "draft", link: "#", notes: "n/a" }],
+  "2026-02-09": [{ subject: "Empty", status: "draft", link: "#", notes: "n/a" }],
+  "2026-02-10": [{ subject: "Market reframe", status: "sent", link: "https://docs.google.com/document/d/13DdYz5TZK_ZURIQi3wTskquwY9KkEauEoMvxwg2wYh0/edit?usp=sharing", notes: "No middle of email ad yet. Trust first" }],
+  "2026-02-11": [{ subject: "Hardware Wallet", status: "sent", link: "https://docs.google.com/document/d/1qOZljlR74-q-XTfojLia6LCloWBhcsEI6E-p1mT3mgM/edit?usp=sharing", notes: "Could we aff link a couple wallets?" }],
+  "2026-02-12": [{ subject: "Direct offer", status: "sent", link: "https://docs.google.com/document/d/1h89jkHzmOn5Ah2B3oLFuFNqi7jL6aORk1nvyrnaRY9E/edit?usp=sharing", notes: "To Kevin 995 vsl" }],
+  "2026-02-13": [{ subject: "Trustpilot", status: "sent", link: "https://docs.google.com/document/d/1a3CKCKZiB6Y0h3jBp-WZ3cJxwwZp75kVI2SS-Nj1r3M/edit?usp=sharing", notes: "No notes" }],
+  "2026-02-14": [{ subject: "TBD", status: "draft", link: "", notes: "TBD" }],
+  "2026-02-15": [{ subject: "TBD", status: "draft", link: "", notes: "TBD" }],
+  "2026-02-16": [{ subject: "TBD", status: "draft", link: "", notes: "TBD" }],
+  "2026-02-17": [{ subject: "TBD", status: "draft", link: "", notes: "TBD" }],
+  "2026-02-18": [{ subject: "TBD", status: "draft", link: "", notes: "CTA to video" }],
+  "2026-02-19": [{ subject: "TBD", status: "draft", link: "", notes: "CTA to video" }],
+  "2026-02-20": [{ subject: "Jamie 1", status: "sent", link: "https://docs.google.com/document/d/1xUdeNli_PGdq-FcNUy6veBG72NZgUoBEMC2KT0gAkvc/edit?usp=sharing", notes: "CTA to video" }],
+  "2026-02-21": [{ subject: "Jamie 2", status: "sent", link: "https://docs.google.com/document/d/1TntqRoK2hTTnb62M1NuTNSqc8oBpeGxRPV3rjguInVI/edit?usp=sharing", notes: "CTA to video" }],
+  "2026-02-22": [{ subject: "Jamie 3", status: "scheduled", link: "https://docs.google.com/document/d/12u5BEKWAWRIgQmnN9Chxonp5UATRbmBVpYtEM_YVg3o/edit?usp=sharing", notes: "CTA to video" }],
+  "2026-02-23": [{ subject: "Jamie 4", status: "scheduled", link: "https://docs.google.com/document/d/13QgOtpONdM43-lCxgikNINCnEsqLWLazjM7LMkIyPOk/edit?usp=sharing", notes: "CTA to video" }],
+  "2026-02-24": [{ subject: "Jamie 5", status: "scheduled", link: "https://docs.google.com/document/d/1G4mjE02v6LEk6Ke6CK3Yj8rOkYcyEomN-oV2r5ICzj4/edit?usp=sharing", notes: "CTA to video" }],
+  "2026-02-25": [{ subject: "Jamie cart close 1", status: "scheduled", link: "https://docs.google.com/document/d/1haGvL39SnHd8zaTO74tEh72yZ0sTVf-QTdAlFxCNeBY/edit?usp=sharing", notes: "Straight to checkout" }],
+  "2026-02-26": [{ subject: "Jamie cart close 2", status: "scheduled", link: "https://docs.google.com/document/d/1nzS8EwLefFznIrG5SSe9NIqIat8MzSgCZLBE6KNCD0Y/edit?usp=sharing", notes: "Straight to checkout" }],
+  "2026-02-27": [{ subject: "Jamie cart close 3", status: "scheduled", link: "https://docs.google.com/document/d/1kfy-xPPX5anTdaVr36eMEvhbzG2xD_TOVmAjnM2rbV8/edit?usp=sharing", notes: "Straight to checkout" }],
+  "2026-02-28": [{ subject: "Jamie cart close 4", status: "scheduled", link: "https://docs.google.com/document/d/1Vd8QSbMWJIWAit3Vgnu5vh_UU5OeFXyzn1pm_RsWEJY/edit?usp=sharing", notes: "Straight to checkout" }],
 
   // ——— MARCH 2026 ———
-  // Add March emails here as they're created:
-  // "2026-03-01": { subject: "...", status: "draft", link: "", notes: "" },
+  // One email:  "2026-03-01": [{ subject: "...", status: "draft", link: "", notes: "" }],
+  // Two emails: "2026-03-01": [{ subject: "Email A", ... }, { subject: "Email B", ... }],
 
   // ——— APRIL 2026 ———
-  // Add April emails here as they're created:
-  "2026-04-07": { subject: "The $126,000 Ghost Pattern", status: "scheduled", link: "https://docs.google.com/document/d/1v4KcU7jCSDjqZgyTVHLEjVbcJ-3HRTc58-ylbnVyVy0/edit?usp=sharing", notes: "Push to call" },
-  "2026-04-08": { subject: "Hormuz is closed", status: "scheduled", link: "https://docs.google.com/document/d/1_8fCLtpCHfJ8MOxvwNqHjqKBTZ0JBFZVOxHp35LJYlY/edit?usp=sharing", notes: "Push to call" },
-
+  "2026-04-07": [{ subject: "The $126,000 Ghost Pattern", status: "scheduled", link: "https://docs.google.com/document/d/1v4KcU7jCSDjqZgyTVHLEjVbcJ-3HRTc58-ylbnVyVy0/edit?usp=sharing", notes: "Push to call" }],
+  "2026-04-08": [{ subject: "Hormuz is closed", status: "scheduled", link: "https://docs.google.com/document/d/1_8fCLtpCHfJ8MOxvwNqHjqKBTZ0JBFZVOxHp35LJYlY/edit?usp=sharing", notes: "Push to call" }],
 
   // ——— MAY 2026 ———
-  // Add May emails here as they're created:
-  // "2026-05-01": { subject: "...", status: "draft", link: "", notes: "" },
+  // "2026-05-01": [{ subject: "...", status: "draft", link: "", notes: "" }],
 };
 
 const WEEKDAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -99,7 +112,79 @@ function StatusBadge({ status }) {
   );
 }
 
-function EmailModal({ date, email, onClose }) {
+function SingleEmailCard({ email, index, total }) {
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: 14,
+        padding: total > 1 ? 16 : 0,
+        background: total > 1 ? "rgba(255,255,255,0.03)" : "transparent",
+        borderRadius: total > 1 ? 10 : 0,
+        border: total > 1 ? "1px solid rgba(255,255,255,0.07)" : "none",
+      }}
+    >
+      {total > 1 && (
+        <p style={{ color: "#475569", fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", margin: 0 }}>
+          Email {index + 1} of {total}
+        </p>
+      )}
+      <div>
+        <p style={{ color: "#64748B", fontSize: 11, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 6px 0" }}>
+          Subject Line
+        </p>
+        <p style={{ color: "#F1F5F9", fontSize: 18, fontWeight: 600, margin: 0, lineHeight: 1.4, fontFamily: "'Playfair Display', Georgia, serif" }}>
+          {email.subject}
+        </p>
+      </div>
+      <div>
+        <p style={{ color: "#64748B", fontSize: 11, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 6px 0" }}>
+          Status
+        </p>
+        <StatusBadge status={email.status} />
+      </div>
+      {email.link && (
+        <div>
+          <p style={{ color: "#64748B", fontSize: 11, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 6px 0" }}>
+            Email Link
+          </p>
+          <a
+            href={email.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color: "#4ADE80",
+              fontSize: 14,
+              textDecoration: "none",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 6,
+              padding: "8px 16px",
+              background: "rgba(74,222,128,0.08)",
+              borderRadius: 8,
+              border: "1px solid rgba(74,222,128,0.2)",
+            }}
+          >
+            View Email →
+          </a>
+        </div>
+      )}
+      {email.notes && (
+        <div>
+          <p style={{ color: "#64748B", fontSize: 11, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 6px 0" }}>
+            Notes
+          </p>
+          <p style={{ color: "#CBD5E1", fontSize: 14, margin: 0, lineHeight: 1.5, fontStyle: "italic" }}>
+            {email.notes}
+          </p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function EmailModal({ date, emails, onClose }) {
   if (!date) return null;
 
   const dateObj = new Date(date + "T12:00:00");
@@ -132,7 +217,7 @@ function EmailModal({ date, email, onClose }) {
           border: "1px solid rgba(74,222,128,0.15)",
           borderRadius: 16,
           padding: 32,
-          maxWidth: 500,
+          maxWidth: 520,
           width: "90%",
           boxShadow: "0 25px 60px rgba(0,0,0,0.5), 0 0 40px rgba(74,222,128,0.05)",
           animation: "slideUp 0.3s ease",
@@ -141,7 +226,7 @@ function EmailModal({ date, email, onClose }) {
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 20 }}>
           <div>
             <p style={{ color: "#4ADE80", fontSize: 12, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", margin: 0, marginBottom: 4 }}>
-              Email Details
+              {emails && emails.length > 1 ? `${emails.length} Emails Scheduled` : "Email Details"}
             </p>
             <p style={{ color: "#94A3B8", fontSize: 14, margin: 0 }}>{formatted}</p>
           </div>
@@ -165,62 +250,11 @@ function EmailModal({ date, email, onClose }) {
           </button>
         </div>
 
-        {email ? (
+        {emails && emails.length > 0 ? (
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-            <div>
-              <p style={{ color: "#64748B", fontSize: 11, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 6px 0" }}>
-                Subject Line
-              </p>
-              <p style={{ color: "#F1F5F9", fontSize: 18, fontWeight: 600, margin: 0, lineHeight: 1.4, fontFamily: "'Playfair Display', Georgia, serif" }}>
-                {email.subject}
-              </p>
-            </div>
-
-            <div>
-              <p style={{ color: "#64748B", fontSize: 11, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 6px 0" }}>
-                Status
-              </p>
-              <StatusBadge status={email.status} />
-            </div>
-
-            {email.link && (
-              <div>
-                <p style={{ color: "#64748B", fontSize: 11, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 6px 0" }}>
-                  Email Link
-                </p>
-                <a
-                  href={email.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    color: "#4ADE80",
-                    fontSize: 14,
-                    textDecoration: "none",
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 6,
-                    padding: "8px 16px",
-                    background: "rgba(74,222,128,0.08)",
-                    borderRadius: 8,
-                    border: "1px solid rgba(74,222,128,0.2)",
-                    transition: "all 0.2s",
-                  }}
-                >
-                  View Email →
-                </a>
-              </div>
-            )}
-
-            {email.notes && (
-              <div>
-                <p style={{ color: "#64748B", fontSize: 11, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", margin: "0 0 6px 0" }}>
-                  Notes
-                </p>
-                <p style={{ color: "#CBD5E1", fontSize: 14, margin: 0, lineHeight: 1.5, fontStyle: "italic" }}>
-                  {email.notes}
-                </p>
-              </div>
-            )}
+            {emails.map((email, i) => (
+              <SingleEmailCard key={i} email={email} index={i} total={emails.length} />
+            ))}
           </div>
         ) : (
           <div style={{ textAlign: "center", padding: "20px 0" }}>
@@ -244,9 +278,10 @@ export default function App() {
   const days = Array.from({ length: monthData.days }, (_, i) => i + 1);
 
   const monthEmails = Object.entries(EMAIL_DATA).filter(([d]) => d.startsWith(activeMonth));
-  const sentCount = monthEmails.filter(([, e]) => e.status === "sent").length;
-  const scheduledCount = monthEmails.filter(([, e]) => e.status === "scheduled").length;
-  const draftCount = monthEmails.filter(([, e]) => e.status === "draft").length;
+  const allMonthEmailItems = monthEmails.flatMap(([, arr]) => arr);
+  const sentCount = allMonthEmailItems.filter((e) => e.status === "sent").length;
+  const scheduledCount = allMonthEmailItems.filter((e) => e.status === "scheduled").length;
+  const draftCount = allMonthEmailItems.filter((e) => e.status === "draft").length;
 
   const dateKey = (day) => {
     const d = String(day).padStart(2, "0");
@@ -411,10 +446,11 @@ export default function App() {
             ))}
             {days.map((day) => {
               const key = dateKey(day);
-              const email = EMAIL_DATA[key];
+              const emails = EMAIL_DATA[key];
               const isToday = key === today;
               const isPast = key < today;
-              const statusColor = email ? STATUS_CONFIG[email.status].color : "transparent";
+              // Use the first email's status color for the bottom bar
+              const statusColor = emails ? STATUS_CONFIG[emails[0].status].color : "transparent";
 
               return (
                 <div
@@ -428,14 +464,14 @@ export default function App() {
                     borderBottom: "1px solid rgba(255,255,255,0.03)",
                     background: isToday
                       ? "rgba(74,222,128,0.06)"
-                      : email
+                      : emails
                         ? "rgba(255,255,255,0.01)"
                         : "transparent",
                     borderLeft: isToday ? "2px solid #4ADE80" : "2px solid transparent",
                     position: "relative",
                     display: "flex",
                     flexDirection: "column",
-                    gap: 6,
+                    gap: 4,
                   }}
                 >
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
@@ -462,32 +498,46 @@ export default function App() {
                         TODAY
                       </span>
                     )}
+                    {emails && emails.length > 1 && (
+                      <span style={{ fontSize: 9, fontWeight: 700, color: "#60A5FA", background: "rgba(96,165,250,0.15)", padding: "1px 5px", borderRadius: 4 }}>
+                        ×{emails.length}
+                      </span>
+                    )}
                   </div>
 
-                  {email && (
+                  {emails && (
                     <>
-                      <p
-                        style={{
-                          margin: 0,
-                          fontSize: 11,
-                          fontWeight: 500,
-                          color: "#CBD5E1",
-                          lineHeight: 1.3,
-                          overflow: "hidden",
-                          display: "-webkit-box",
-                          WebkitLineClamp: 2,
-                          WebkitBoxOrient: "vertical",
-                        }}
-                      >
-                        {email.subject}
-                      </p>
-                      <div style={{ marginTop: "auto" }}>
-                        <StatusBadge status={email.status} />
+                      <div style={{ display: "flex", flexDirection: "column", gap: 4, flex: 1 }}>
+                        {emails.map((email, i) => (
+                          <div key={i} style={{ display: "flex", flexDirection: "column", gap: 2 }}>
+                            {emails.length > 1 && (
+                              <p style={{ margin: 0, fontSize: 9, color: "#475569", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.06em" }}>
+                                #{i + 1}
+                              </p>
+                            )}
+                            <p
+                              style={{
+                                margin: 0,
+                                fontSize: 11,
+                                fontWeight: 500,
+                                color: "#CBD5E1",
+                                lineHeight: 1.3,
+                                overflow: "hidden",
+                                display: "-webkit-box",
+                                WebkitLineClamp: 2,
+                                WebkitBoxOrient: "vertical",
+                              }}
+                            >
+                              {email.subject}
+                            </p>
+                            <StatusBadge status={email.status} />
+                          </div>
+                        ))}
                       </div>
                     </>
                   )}
 
-                  {email && (
+                  {emails && (
                     <div
                       style={{
                         position: "absolute",
@@ -532,7 +582,7 @@ export default function App() {
       {selectedDate && (
         <EmailModal
           date={selectedDate}
-          email={EMAIL_DATA[selectedDate]}
+          emails={EMAIL_DATA[selectedDate]}
           onClose={() => setSelectedDate(null)}
         />
       )}
