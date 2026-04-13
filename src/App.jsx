@@ -78,8 +78,14 @@ const EMAIL_DATA = {
   // Two emails: "2026-03-01": [{ subject: "Email A", ... }, { subject: "Email B", ... }],
 
   // ——— APRIL 2026 ———
-  "2026-04-07": [{ subject: "The $126,000 Ghost Pattern", status: "scheduled", link: "https://docs.google.com/document/d/1v4KcU7jCSDjqZgyTVHLEjVbcJ-3HRTc58-ylbnVyVy0/edit?usp=sharing", notes: "Push to call" }],
-  "2026-04-08": [{ subject: "Hormuz is closed", status: "scheduled", link: "https://docs.google.com/document/d/1_8fCLtpCHfJ8MOxvwNqHjqKBTZ0JBFZVOxHp35LJYlY/edit?usp=sharing", notes: "Push to call" }],
+  "2026-04-07": [{ subject: "The $126,000 Ghost Pattern", status: "sent", link: "https://docs.google.com/document/d/1v4KcU7jCSDjqZgyTVHLEjVbcJ-3HRTc58-ylbnVyVy0/edit?usp=sharing", notes: "Push to call" }],
+  "2026-04-08": [{ subject: "Hormuz is closed", status: "sent", link: "https://docs.google.com/document/d/1_8fCLtpCHfJ8MOxvwNqHjqKBTZ0JBFZVOxHp35LJYlY/edit?usp=sharing", notes: "Push to call" }],
+  "2026-04-13": [{ subject: "Your final clue", status: "scheduled", link: "https://docs.google.com/document/d/1DLZ6Qb3jYHtJjV59qp54zGiWL2i9UojuysGh102M2ss/edit?usp=sharing", notes: "Send to ppl who opened #1" }],
+  "2026-04-13": [{ subject: "Beware of tomorrow", status: "scheduled", link: "https://docs.google.com/document/d/1OxGQPqStdyATwIMgaNjs_6ArU7zHQ6hIMMLTtaptVhQ/edit?usp=sharing", notes: "Send to entire list" }],
+
+
+
+
 
   // ——— MAY 2026 ———
   // "2026-05-01": [{ subject: "...", status: "draft", link: "", notes: "" }],
