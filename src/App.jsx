@@ -85,8 +85,10 @@ const EMAIL_DATA = {
   { subject: "Your final clue", status: "scheduled", link: "https://docs.google.com/document/d/1DLZ6Qb3jYHtJjV59qp54zGiWL2i9UojuysGh102M2ss/edit?usp=sharing", notes: "Send to ppl who opened #1" },
   { subject: "Beware of tomorrow", status: "scheduled", link: "https://docs.google.com/document/d/1OxGQPqStdyATwIMgaNjs_6ArU7zHQ6hIMMLTtaptVhQ/edit?usp=sharing", notes: "Send to entire list" },
 ],
-
-
+  "2026-04-14": [
+  { subject: "Why I'm quitting crypto", status: "scheduled", link: "https://docs.google.com/document/d/1xW2X2M5GW5sE6WLkQl5kys8IC4_9KUA1ITNuV0j1fAw/edit?usp=sharing", notes: "Entire list" },
+  { subject: "A mountain of cash", status: "scheduled", link: "https://docs.google.com/document/d/1wiC4Nl1KRo0aWL2Ydh_CuYCUj_cp0vA7QxuyzS9DXfg/edit?usp=sharing", notes: "Entire list" },
+],
 
 
   // ——— MAY 2026 ———
