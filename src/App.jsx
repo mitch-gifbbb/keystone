@@ -86,10 +86,14 @@ const EMAIL_DATA = {
   { subject: "Beware of tomorrow", status: "scheduled", link: "https://docs.google.com/document/d/1OxGQPqStdyATwIMgaNjs_6ArU7zHQ6hIMMLTtaptVhQ/edit?usp=sharing", notes: "Send to entire list" },
 ],
   "2026-04-14": [
-  { subject: "Why I'm quitting crypto", status: "scheduled", link: "https://docs.google.com/document/d/1xW2X2M5GW5sE6WLkQl5kys8IC4_9KUA1ITNuV0j1fAw/edit?usp=sharing", notes: "Entire list" },
-  { subject: "A mountain of cash", status: "scheduled", link: "https://docs.google.com/document/d/1wiC4Nl1KRo0aWL2Ydh_CuYCUj_cp0vA7QxuyzS9DXfg/edit?usp=sharing", notes: "Entire list" },
+  { subject: "Why I'm quitting crypto", status: "sent", link: "https://docs.google.com/document/d/1xW2X2M5GW5sE6WLkQl5kys8IC4_9KUA1ITNuV0j1fAw/edit?usp=sharing", notes: "Entire list" },
+  { subject: "A mountain of cash", status: "sent", link: "https://docs.google.com/document/d/1wiC4Nl1KRo0aWL2Ydh_CuYCUj_cp0vA7QxuyzS9DXfg/edit?usp=sharing", notes: "Entire list" },
 ],
 
+  "2026-04-15": [
+  { subject: "Not Nvidia", status: "scheduled", link: "https://docs.google.com/document/d/1rQNpNL9khr55p6yhy190qWiXx8s4Qle4L-uFK2QEEkU/edit?usp=sharing", notes: "Entire list" },
+  { subject: "Invisible play", status: "scheduled", link: "https://docs.google.com/document/d/16m1hOoOQ4KiosWwge31r2Wg4IL5wAASNGNNLSKYB5DM/edit?usp=sharing", notes: "Entire list" },
+],
 
   // ——— MAY 2026 ———
   // "2026-05-01": [{ subject: "...", status: "draft", link: "", notes: "" }],
