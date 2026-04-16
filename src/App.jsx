@@ -91,9 +91,16 @@ const EMAIL_DATA = {
 ],
 
   "2026-04-15": [
-  { subject: "Not Nvidia", status: "scheduled", link: "https://docs.google.com/document/d/1rQNpNL9khr55p6yhy190qWiXx8s4Qle4L-uFK2QEEkU/edit?usp=sharing", notes: "Entire list" },
-  { subject: "Invisible play", status: "scheduled", link: "https://docs.google.com/document/d/16m1hOoOQ4KiosWwge31r2Wg4IL5wAASNGNNLSKYB5DM/edit?usp=sharing", notes: "Entire list" },
+  { subject: "Not Nvidia", status: "sent", link: "https://docs.google.com/document/d/1rQNpNL9khr55p6yhy190qWiXx8s4Qle4L-uFK2QEEkU/edit?usp=sharing", notes: "Entire list" },
+  { subject: "Invisible play", status: "sent", link: "https://docs.google.com/document/d/16m1hOoOQ4KiosWwge31r2Wg4IL5wAASNGNNLSKYB5DM/edit?usp=sharing", notes: "Entire list" },
 ],
+
+ "2026-04-16": [
+  { subject: "brother in law", status: "scheduled", link: "https://docs.google.com/document/d/14CIFgpqJvRfPKyl366QTRhtSB_ZKjn4vblvo9nIusUk/edit?usp=sharing", notes: "Entire list" },
+  { subject: "bubble lie", status: "scheduled", link: "https://docs.google.com/document/d/1H56F2iwld-yOHvdPIQUJSpGPWmMMlR0SOjHnyQ_phGU/edit?usp=sharing", notes: "Entire list" },
+],
+
+
 
   // ——— MAY 2026 ———
   // "2026-05-01": [{ subject: "...", status: "draft", link: "", notes: "" }],
