@@ -101,9 +101,15 @@ const EMAIL_DATA = {
 ],
 
  "2026-04-17": [
-  { subject: "AI Boom", status: "scheduled", link: "https://docs.google.com/document/d/1fK_B5dI8zWpVyi8fFVioVZxyIcMY6Hjspfw_keW10Ds/edit?usp=sharing", notes: "Entire list" },
-  { subject: "Apology", status: "scheduled", link: "https://docs.google.com/document/d/1UJiS81hIokGBV1wIqIkn7KdS695FmNzxFzQh-WQWGNQ/edit?usp=sharing", notes: "Entire list" },
+  { subject: "AI Boom", status: "sent", link: "https://docs.google.com/document/d/1fK_B5dI8zWpVyi8fFVioVZxyIcMY6Hjspfw_keW10Ds/edit?usp=sharing", notes: "Entire list" },
+  { subject: "Apology", status: "sent", link: "https://docs.google.com/document/d/1UJiS81hIokGBV1wIqIkn7KdS695FmNzxFzQh-WQWGNQ/edit?usp=sharing", notes: "Entire list" },
 ],
+
+ "2026-04-18": [
+  { subject: "crypto rich", status: "scheduled", link: "https://docs.google.com/document/d/1B05t_CuK0CuMsjjbHMBA-HQtQ63gHnhzdf7AdbhdHjQ/edit?usp=sharing", notes: "Entire list" },
+  { subject: "massacre", status: "scheduled", link: "https://docs.google.com/document/d/12F0yah5KC08_xsXOYitQoHuvzIpz3Ri9slPV_rRcGzQ/edit?usp=sharing", notes: "Entire list" },
+],
+
 
   // ——— MAY 2026 ———
   // "2026-05-01": [{ subject: "...", status: "draft", link: "", notes: "" }],
