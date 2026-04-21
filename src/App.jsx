@@ -106,10 +106,17 @@ const EMAIL_DATA = {
 ],
 
  "2026-04-18": [
-  { subject: "crypto rich", status: "scheduled", link: "https://docs.google.com/document/d/1B05t_CuK0CuMsjjbHMBA-HQtQ63gHnhzdf7AdbhdHjQ/edit?usp=sharing", notes: "Entire list" },
-  { subject: "massacre", status: "scheduled", link: "https://docs.google.com/document/d/12F0yah5KC08_xsXOYitQoHuvzIpz3Ri9slPV_rRcGzQ/edit?usp=sharing", notes: "Entire list" },
+  { subject: "crypto rich", status: "sent", link: "https://docs.google.com/document/d/1B05t_CuK0CuMsjjbHMBA-HQtQ63gHnhzdf7AdbhdHjQ/edit?usp=sharing", notes: "Entire list" },
+  { subject: "massacre", status: "sent", link: "https://docs.google.com/document/d/12F0yah5KC08_xsXOYitQoHuvzIpz3Ri9slPV_rRcGzQ/edit?usp=sharing", notes: "Entire list" },
 ],
 
+ "2026-04-20": [
+  { subject: "neighbors", status: "scheduled", link: "https://docs.google.com/document/d/1ghFbHCBwnzxrJBI2LJnUV-F4Xmt8Lue1niOyXY71ebI/edit?usp=sharing", notes: "Entire list" },
+],
+
+ "2026-04-21": [
+  { subject: "Alert", status: "scheduled", link: "https://docs.google.com/document/d/1BEu3xGhnw7IshYPOWase2h_Y1zxASTehVjgcAFerl9Y/edit?usp=sharing", notes: "Entire list" },
+],
 
   // ——— MAY 2026 ———
   // "2026-05-01": [{ subject: "...", status: "draft", link: "", notes: "" }],
