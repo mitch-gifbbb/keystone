@@ -111,11 +111,19 @@ const EMAIL_DATA = {
 ],
 
  "2026-04-20": [
-  { subject: "neighbors", status: "scheduled", link: "https://docs.google.com/document/d/1ghFbHCBwnzxrJBI2LJnUV-F4Xmt8Lue1niOyXY71ebI/edit?usp=sharing", notes: "Entire list" },
+  { subject: "neighbors", status: "sent", link: "https://docs.google.com/document/d/1ghFbHCBwnzxrJBI2LJnUV-F4Xmt8Lue1niOyXY71ebI/edit?usp=sharing", notes: "Entire list" },
 ],
 
  "2026-04-21": [
-  { subject: "Alert", status: "scheduled", link: "https://docs.google.com/document/d/1BEu3xGhnw7IshYPOWase2h_Y1zxASTehVjgcAFerl9Y/edit?usp=sharing", notes: "Entire list" },
+  { subject: "Alert", status: "sent", link: "https://docs.google.com/document/d/1BEu3xGhnw7IshYPOWase2h_Y1zxASTehVjgcAFerl9Y/edit?usp=sharing", notes: "Entire list" },
+],
+
+"2026-04-27": [
+  { subject: "Kevin O'leary", status: "scheduled", link: "https://docs.google.com/document/d/1QgmiiPOz0HrP110Pv-G-OaNDWwas4m4rl1aVfFLcGek/edit?usp=sharing", notes: "Smart VSL" },
+],
+
+"2026-04-28": [
+  { subject: "Trump Coin", status: "scheduled", link: "https://docs.google.com/document/d/1Z2BhkSFCofaingG9-QcV9BtOABuI4YXD0kAMel_cqHM/edit?usp=sharing", notes: "Smart VSL" },
 ],
 
   // ——— MAY 2026 ———
