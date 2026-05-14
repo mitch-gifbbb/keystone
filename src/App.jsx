@@ -119,15 +119,22 @@ const EMAIL_DATA = {
 ],
 
 "2026-04-27": [
-  { subject: "Kevin O'leary", status: "scheduled", link: "https://docs.google.com/document/d/1QgmiiPOz0HrP110Pv-G-OaNDWwas4m4rl1aVfFLcGek/edit?usp=sharing", notes: "Smart VSL" },
+  { subject: "Kevin O'leary", status: "sent", link: "https://docs.google.com/document/d/1QgmiiPOz0HrP110Pv-G-OaNDWwas4m4rl1aVfFLcGek/edit?usp=sharing", notes: "Smart VSL" },
 ],
 
 "2026-04-28": [
-  { subject: "Trump Coin", status: "scheduled", link: "https://docs.google.com/document/d/1Z2BhkSFCofaingG9-QcV9BtOABuI4YXD0kAMel_cqHM/edit?usp=sharing", notes: "Smart VSL" },
+  { subject: "Trump Coin", status: "sent", link: "https://docs.google.com/document/d/1Z2BhkSFCofaingG9-QcV9BtOABuI4YXD0kAMel_cqHM/edit?usp=sharing", notes: "Smart VSL" },
 ],
 
   // ——— MAY 2026 ———
   // "2026-05-01": [{ subject: "...", status: "draft", link: "", notes: "" }],
+
+
+"2026-05-14": [
+  { subject: "2 emails + sms", status: "scheduled", link: "https://docs.google.com/document/d/1C0WSMuNzRms1uSEyrn2pxSnBOBl5X4TqfMSEyxofCZY/edit?usp=sharing", notes: "Entire list" },
+],
+
+
 };
 
 const WEEKDAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
