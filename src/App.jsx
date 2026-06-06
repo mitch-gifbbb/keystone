@@ -134,6 +134,11 @@ const EMAIL_DATA = {
   { subject: "2 emails + sms", status: "scheduled", link: "https://docs.google.com/document/d/1C0WSMuNzRms1uSEyrn2pxSnBOBl5X4TqfMSEyxofCZY/edit?usp=sharing", notes: "Entire list" },
 ],
 
+  // ——— JUNE 2026 ———
+  "2026-06-06": [
+   { subject: "Mastercard", status: "scheduled", link: "https://docs.google.com/document/d/140E6GpWZgsTak7rSB0w6QL0UT_Hs0IwckLpk5qmRrIU/edit?usp=sharing", notes: "Reply for info" },
+   { subject: "Clarity follow up", status: "scheduled", link: "https://docs.google.com/document/d/1PgIh5rk7yLdMgmmuEpiMQhU8xfwxshpLPa8aWkswav0/edit?usp=sharing", notes: "Reply for info" }
+  ],
 
 };
 
