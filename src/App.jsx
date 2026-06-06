@@ -78,6 +78,7 @@ const EMAIL_DATA = {
   // Two emails: "2026-03-01": [{ subject: "Email A", ... }, { subject: "Email B", ... }],
 
   // ——— APRIL 2026 ———
+
   "2026-04-07": [{ subject: "The $126,000 Ghost Pattern", status: "sent", link: "https://docs.google.com/document/d/1v4KcU7jCSDjqZgyTVHLEjVbcJ-3HRTc58-ylbnVyVy0/edit?usp=sharing", notes: "Push to call" }],
   "2026-04-08": [{ subject: "Hormuz is closed", status: "sent", link: "https://docs.google.com/document/d/1_8fCLtpCHfJ8MOxvwNqHjqKBTZ0JBFZVOxHp35LJYlY/edit?usp=sharing", notes: "Push to call" }],
   
@@ -135,6 +136,7 @@ const EMAIL_DATA = {
 ],
 
   // ——— JUNE 2026 ———
+
   "2026-06-06": [
    { subject: "Mastercard", status: "scheduled", link: "https://docs.google.com/document/d/140E6GpWZgsTak7rSB0w6QL0UT_Hs0IwckLpk5qmRrIU/edit?usp=sharing", notes: "Reply for info" },
    { subject: "Clarity follow up", status: "scheduled", link: "https://docs.google.com/document/d/1PgIh5rk7yLdMgmmuEpiMQhU8xfwxshpLPa8aWkswav0/edit?usp=sharing", notes: "Reply for info" }
@@ -439,7 +441,7 @@ export default function App() {
       {/* Month Tabs */}
       <div style={{ padding: "0 40px", maxWidth: 1100, margin: "0 auto" }}>
         <div style={{ display: "flex", gap: 8, marginBottom: 20 }}>
-          {["2026-02", "2026-03", "2026-04", "2026-05"].map((m) => {
+          {["2026-02", "2026-03", "2026-04", "2026-05", "2026-06"].map((m) => {
             const d = getMonthData(m);
             const isActive = m === activeMonth;
             return (
