@@ -142,6 +142,15 @@ const EMAIL_DATA = {
    { subject: "Clarity follow up", status: "scheduled", link: "https://docs.google.com/document/d/1PgIh5rk7yLdMgmmuEpiMQhU8xfwxshpLPa8aWkswav0/edit?usp=sharing", notes: "Reply for info" }
   ],
 
+  // ——— JULY 2026 ———
+
+  "2026-07-30": [
+   { subject: "$114 Trillion moves", status: "scheduled", link: "https://docs.google.com/document/d/10l5RHA96nI20MAxNA1aNlFZMeOCQv5z0WisRpybjlQc/edit?usp=sharing", notes: "Webinar Promo" },
+   
+  ],
+
+
+
 };
 
 const WEEKDAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -441,7 +450,7 @@ export default function App() {
       {/* Month Tabs */}
       <div style={{ padding: "0 40px", maxWidth: 1100, margin: "0 auto" }}>
         <div style={{ display: "flex", gap: 8, marginBottom: 20 }}>
-          {["2026-02", "2026-03", "2026-04", "2026-05", "2026-06"].map((m) => {
+          {["2026-02", "2026-03", "2026-04", "2026-05", "2026-06", "2026-07", "2026-08"].map((m) => {
             const d = getMonthData(m);
             const isActive = m === activeMonth;
             return (
