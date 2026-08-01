@@ -145,10 +145,13 @@ const EMAIL_DATA = {
   // ——— JULY 2026 ———
 
   "2026-07-30": [
-   { subject: "$114 Trillion moves", status: "scheduled", link: "https://docs.google.com/document/d/10l5RHA96nI20MAxNA1aNlFZMeOCQv5z0WisRpybjlQc/edit?usp=sharing", notes: "Webinar Promo" },
+   { subject: "$114 Trillion moves", status: "sent", link: "https://docs.google.com/document/d/10l5RHA96nI20MAxNA1aNlFZMeOCQv5z0WisRpybjlQc/edit?usp=sharing", notes: "Webinar Promo" },
    
   ],
 
+  "2026-07-31": [
+   { subject: "Before October", status: "scheduled", link: "https://docs.google.com/document/d/1XImCpV9E17xkE3mHP15SvkAYJ9laejq4Hkib7Ki5ips/edit?usp=sharing", notes: "Webinar Promo" },
+],
 
 
 };
